@@ -1,0 +1,68 @@
+﻿
+@{
+    ViewBag.Title = "Login";
+}
+
+
+<section id="aa-myaccount">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="aa-myaccount-area">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="aa-myaccount-login">
+                                <h4>Giriş Yap</h4>
+                               
+                            @using (Html.BeginForm("Login", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
+                                {
+                                    <label for="">Kullanıcı Adı veya Şifre<span>*</span></label>
+                                    <input name="UserName" type="text" required placeholder="Kullancı Adı">
+                                    <label for="">Şifre<span>*</span></label>
+                                    <input name="Password" type="password" required placeholder="Şifre">
+                                    <button type="submit" class="aa-browse-btn">Giriş Yap</button>
+                                    <label class="rememberme" for="rememberme"><input type="checkbox" id="rememberme"> Beni Hatırla </label>
+                                    <p class="aa-lost-password"><a href="#">Şifremi Unuttum</a></p>
+                            }
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="aa-myaccount-register">
+                                <h4>Kayıt Ol</h4>
+
+                                @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "aa-login-form" }))
+                                {
+                                    <label for="">Ad<span>*</span></label>
+                                    <input name="First_Name" type="text"  placeholder="Adınız">
+
+                                    <label for="">Soyad<span>*</span></label>
+                                    <input name="Last_Name" type="text" placeholder="Soyadınız">
+
+                                    <label for="">Kullanıcı Adı<span>*</span></label>
+                                    <input name="UserName" type="text" placeholder="Kullanıcı Adınız">
+
+                                    <label for="">Şifre<span>*</span></label>
+                                    <input name="Password" type="password" placeholder="Şifreniz">
+
+                                    <label for="">Email<span>*</span></label>
+                                    <input name="Email" type="text" placeholder="Email Adresiniz">
+
+                                    <label for="">Telefon<span>*</span></label>
+                                    <input name="Mobile1" type="text" placeholder="Telefonunuz">
+
+                                    <label for="">Adres<span></span></label>
+                                    <input name="Address1" type="text" placeholder="Adresiniz">
+
+                                    <button type="submit" class="aa-browse-btn">Kayıt Ol</button>
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
